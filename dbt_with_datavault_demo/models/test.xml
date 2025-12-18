@@ -1,0 +1,1187 @@
+<ResHistory Version="1.0">
+    <ResShell>
+        <ResHeader>
+            <ResID>427113</ResID>
+            <ResGUID>2810C68B-3621-4FF4-ADBD-B49375CA0BB7</ResGUID>
+            <AgencyID>406</AgencyID>
+            <SecAgencyID>406</SecAgencyID>
+            <ExtraAgencyID>5</ExtraAgencyID>
+            <Currency>USD</Currency>
+            <Referral>
+                <Code>9AGTFAM</Code>
+            </Referral>
+            <InitialDate>2022-11-14T00:00: 00.000</InitialDate>
+            <ResStatus>BK</ResStatus>
+            <DynamicFields>
+                <Field>
+                    <Name>APC_SELECTED</Name>
+                    <StrVal>N</StrVal>
+                </Field>
+                <Field>
+                    <Name>CABIN_NUMBER</Name>
+                    <StrVal>215</StrVal>
+                </Field>
+                <Field>
+                    <Name>CONV_RECEIPTS_OK</Name>
+                    <StrVal>Y</StrVal>
+                </Field>
+                <Field>
+                    <Name>CONV_TRANSACT_OK</Name>
+                    <StrVal>Y</StrVal>
+                </Field>
+                <Field>
+                    <Name>GUEST_TYPE</Name>
+                    <StrVal>REDUCED</StrVal>
+                </Field>
+                <Field>
+                    <Name>INSURANCE</Name>
+                    <StrVal>STANDARD</StrVal>
+                </Field>
+                <Field>
+                    <Name>INVOICE_TOTAL</Name>
+                    <NumVal>19560</NumVal>
+                </Field>
+                <Field>
+                    <Name>OCCUPANCY</Name>
+                    <NumVal>2</NumVal>
+                </Field>
+                <Field>
+                    <Name>REFERRAL_SOURCE</Name>
+                    <StrVal>9AGTFAM</StrVal>
+                </Field>
+                <Field>
+                    <Name>TERMS_PAUSED</Name>
+                    <StrVal>N</StrVal>
+                </Field>
+                <Field>
+                    <Name>TRANSFER_OPTION</Name>
+                    <StrVal>YES</StrVal>
+                </Field>
+            </DynamicFields>
+            <LastInvoice>
+                <RefNumber>20827</RefNumber>
+                <InvoiceID>20827</InvoiceID>
+                <Amount>19560</Amount>
+                <Date>2023-04-26</Date>
+            </LastInvoice>
+            <InvoiceTotals>
+                <InvoiceTotal>19560</InvoiceTotal>
+                <InvoicePaid>0</InvoicePaid>
+                <InvoicePaidClient>0</InvoicePaidClient>
+                <InvoicePaidAgency>0</InvoicePaidAgency>
+                <ChargeTotal>0</ChargeTotal>
+                <GrandTotal>19560</GrandTotal>
+                <ComTotal>4630</ComTotal>
+                <ComPaid>0</ComPaid>
+                <GrossDue>19560</GrossDue>
+                <NetDue>14930</NetDue>
+                <GrossUp>0</GrossUp>
+                <PendingPayments>0</PendingPayments>
+                <PendingRefunds>0</PendingRefunds>
+                <CurrentDue>
+                    <DueDate>2023-07-27T23: 59: 59.000</DueDate>
+                    <AmountDue>14930</AmountDue>
+                    <DueType>FINAL PAYMENT</DueType>
+                </CurrentDue>
+                <CurrentDueGuest>
+                    <DueDate>2023-07-27T23: 59: 59.000</DueDate>
+                    <AmountDue>19560</AmountDue>
+                    <DueType>FINAL PAYMENT</DueType>
+                </CurrentDueGuest>
+            </InvoiceTotals>
+            <Probability>100</Probability>
+            <IsManualProbability>N</IsManualProbability>
+            <SourceCode>CONVERSION</SourceCode>
+            <OfficeCode>LEX</OfficeCode>
+            <CurrencyRate>1</CurrencyRate>
+            <Ownership>LME</Ownership>
+            <Language>ENG</Language>
+            <ResMode>REGULAR</ResMode>
+            <IsOnTerms>N</IsOnTerms>
+            <ConsiderPaid>N</ConsiderPaid>
+            <InvoicesPerGuest>N</InvoicesPerGuest>
+            <Version>1</Version>
+            <TWReferralCode>2810C68B-3621-4FF4-ADBD-B49375CA0BB7</TWReferralCode>
+        </ResHeader>
+        <ResGuests>
+            <ResGuest>
+                <GuestSeqN>1</GuestSeqN>
+                <GuestID>37704</GuestID>
+                <GuestType>REDUCED</GuestType>
+                <ClientID>2224619</ClientID>
+                <ClientGUID>13857456-67CD-4736-AC54-06979D737B54</ClientGUID>
+                <AgeCategory>ADULT</AgeCategory>
+                <DynamicFields>
+                    <Field>
+                        <Name>PACKAGE_TYPE</Name>
+                        <StrVal>ECSCY-ECGPS-7</StrVal>
+                    </Field>
+                    <Field>
+                        <Name>SAIL_DATE_FROM</Name>
+                        <DateVal>2023-11-25T00: 00: 00.000</DateVal>
+                    </Field>
+                    <Field>
+                        <Name>SAIL_DATE_TO</Name>
+                        <DateVal>2023-12-02T00: 00:00.000</DateVal>
+                    </Field>
+                    <Field>
+                        <Name>SHIP_CODE</Name>
+                        <StrVal>ET</StrVal>
+                    </Field>
+                </DynamicFields>
+            </ResGuest>
+            <ResGuest>
+                <GuestSeqN>2</GuestSeqN>
+                <GuestID>37705</GuestID>
+                <GuestType>REDUCED</GuestType>
+                <ClientID>2224620</ClientID>
+                <ClientGUID>DB40EDDD-73B3-4880-83B3-F7E96DA737F4</ClientGUID>
+                <AgeCategory>ADULT</AgeCategory>
+                <DynamicFields>
+                    <Field>
+                        <Name>PACKAGE_TYPE</Name>
+                        <StrVal>ECSCY-ECGPS-7</StrVal>
+                    </Field>
+                    <Field>
+                        <Name>SAIL_DATE_FROM</Name>
+                        <DateVal>2023-11-25T00: 00: 00.000</DateVal>
+                    </Field>
+                    <Field>
+                        <Name>SAIL_DATE_TO</Name>
+                        <DateVal>2023-12-02T00: 00: 00.000</DateVal>
+                    </Field>
+                    <Field>
+                        <Name>SHIP_CODE</Name>
+                        <StrVal>ET</StrVal>
+                    </Field>
+                </DynamicFields>
+            </ResGuest>
+        </ResGuests>
+        <ResTours>
+            <ResTour>
+                <PackageType>ETGALASCYGPS</PackageType>
+                <RefPackageID>113768</RefPackageID>
+                <RefPackageCode>ETGALA-231124</RefPackageCode>
+                <GuestRefs>1 2</GuestRefs>
+                <IsValid>Y</IsValid>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <TourItems>
+                    <TourItem>
+                        <SeqN>1</SeqN>
+                        <ComponentType>HOTEL</ComponentType>
+                        <CompRecordID>11311</CompRecordID>
+                        <DateRange>
+                            <From>2023-11-24</From>
+                            <To>2023-11-25</To>
+                        </DateRange>
+                        <Hotel>
+                            <City>ECGYE</City>
+                            <HotelCategory>ECUADOR</HotelCategory>
+                            <HotelCode>ORO VERDE</HotelCode>
+                            <RoomCategory>STANDARD</RoomCategory>
+                            <RoomType>DELUXE</RoomType>
+                        </Hotel>
+                        <BookingComponent>
+                            <RoomSeqN>1</RoomSeqN>
+                        </BookingComponent>
+                    </TourItem>
+                    <TourItem>
+                        <SeqN>2</SeqN>
+                        <ComponentType>INTERNAL AIR</ComponentType>
+                        <CompRecordID>11315</CompRecordID>
+                        <DateRange>
+                            <From>2023-11-25</From>
+                            <To>2023-11-25</To>
+                        </DateRange>
+                        <Package>
+                            <PackageID>113771</PackageID>
+                            <PackageCode>GYE/SCY-231125</PackageCode>
+                        </Package>
+                        <BookingComponent>
+                            <PackageID>113771</PackageID>
+                            <PackageCode>GYE/SCY-231125</PackageCode>
+                        </BookingComponent>
+                    </TourItem>
+                    <TourItem>
+                        <SeqN>3</SeqN>
+                        <ComponentType>VOYAGE</ComponentType>
+                        <CompRecordID>11317</CompRecordID>
+                        <DateRange>
+                            <From>2023-11-25</From>
+                            <To>2023-12-02</To>
+                        </DateRange>
+                        <Voyage>
+                            <PackageID>113385</PackageID>
+                            <PackageCode>ET112347</PackageCode>
+                            <Sail>
+                                <Ship>ET</Ship>
+                                <From>
+                                    <DateTime>2023-11-25T12: 00: 00.000</DateTime>
+                                    <SailRefID>40263</SailRefID>
+                                    <Port>ECSCY</Port>
+                                </From>
+                                <To>
+                                    <DateTime>2023-12-02T08: 00: 00.000</DateTime>
+                                    <SailRefID>40274</SailRefID>
+                                    <Port>ECGPS</Port>
+                                </To>
+                                <PrevArrival>
+                                    <DateTime>2023-11-25T08: 00: 00.000</DateTime>
+                                    <SailRefID>40262</SailRefID>
+                                    <Port>ECSCY</Port>
+                                </PrevArrival>
+                                <NextDeparture>
+                                    <DateTime>2023-12-02T12: 00: 00.000</DateTime>
+                                    <SailRefID>40275</SailRefID>
+                                    <Port>ECGPS</Port>
+                                </NextDeparture>
+                            </Sail>
+                            <Ship>ET</Ship>
+                            <CabinCategory>02</CabinCategory>
+                        </Voyage>
+                        <BookingComponent>
+                            <PackageID>113385</PackageID>
+                            <PackageCode>ET112347</PackageCode>
+                            <CabinSeqN>1</CabinSeqN>
+                        </BookingComponent>
+                    </TourItem>
+                    <TourItem>
+                        <SeqN>4</SeqN>
+                        <ComponentType>INTERNAL AIR</ComponentType>
+                        <CompRecordID>11318</CompRecordID>
+                        <DateRange>
+                            <From>2023-12-02</From>
+                            <To>2023-12-02</To>
+                        </DateRange>
+                        <Package>
+                            <PackageID>113772</PackageID>
+                            <PackageCode>GPS/GYE-231202</PackageCode>
+                        </Package>
+                        <BookingComponent>
+                            <PackageID>113772</PackageID>
+                            <PackageCode>GPS/GYE-231202</PackageCode>
+                        </BookingComponent>
+                    </TourItem>
+                    <TourItem>
+                        <SeqN>5</SeqN>
+                        <ComponentType>HOTEL</ComponentType>
+                        <CompRecordID>11320</CompRecordID>
+                        <DateRange>
+                            <From>2023-12-02</From>
+                            <To>2023-12-03</To>
+                        </DateRange>
+                        <Hotel>
+                            <City>ECGYE</City>
+                            <HotelCategory>ECUADOR</HotelCategory>
+                            <HotelCode>ORO VERDE</HotelCode>
+                            <RoomCategory>STANDARD</RoomCategory>
+                            <RoomType>DELUXE</RoomType>
+                        </Hotel>
+                        <BookingComponent>
+                            <RoomSeqN>2</RoomSeqN>
+                        </BookingComponent>
+                    </TourItem>
+                </TourItems>
+                <DateRange>
+                    <From>2023-11-24</From>
+                    <To>2023-12-03</To>
+                </DateRange>
+            </ResTour>
+        </ResTours>
+        <ResPackages>
+            <ResPackage>
+                <PackageID>113385</PackageID>
+                <PackageCode>ET112347</PackageCode>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <PackageClass>VOYAGE</PackageClass>
+                <PackageType>ECSCY-ECGPS-7</PackageType>
+                <VacationDates>
+                    <From>2023-11-25T12:00: 00.000</From>
+                    <To>2023-12-02T08: 00: 00.000</To>
+                </VacationDates>
+                <Ship>ET</Ship>
+                <PriceCategory>02</PriceCategory>
+                <CabinSeqN>1</CabinSeqN>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP AMOUNT-LINE1</Code>
+                        <Value>NO REFUND</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP AMOUNT-LINE2</Code>
+                        <Value>50% OF TRIP COST</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP AMOUNT-LINE3</Code>
+                        <Value>ADVANCE PAYMENT COST</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP DAYS-LINE1</Code>
+                        <Value>89</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP DAYS-LINE2</Code>
+                        <Value>119</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                    <SetupCode>
+                        <Code>CP DAYS-LINE3</Code>
+                        <Value>999</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+                <SellLimInvResult>OK</SellLimInvResult>
+                <Sail>
+                    <Ship>ET</Ship>
+                    <From>
+                        <DateTime>2023-11-25T12: 00: 00.000</DateTime>
+                        <SailRefID>40263</SailRefID>
+                        <Port>ECSCY</Port>
+                    </From>
+                    <To>
+                        <DateTime>2023-12-02T08: 00: 00.000</DateTime>
+                        <SailRefID>40274</SailRefID>
+                        <Port>ECGPS</Port>
+                    </To>
+                    <PrevArrival>
+                        <DateTime>2023-11-25T08: 00: 00.000</DateTime>
+                        <SailRefID>40262</SailRefID>
+                        <Port>ECSCY</Port>
+                    </PrevArrival>
+                    <NextDeparture>
+                        <DateTime>2023-12-02T12: 00: 00.000</DateTime>
+                        <SailRefID>40275</SailRefID>
+                        <Port>ECGPS</Port>
+                    </NextDeparture>
+                </Sail>
+                <TourInfo>
+                    <PackageType>ETGALASCYGPS</PackageType>
+                    <PackageID>113768</PackageID>
+                    <PackageCode>ETGALA-231124</PackageCode>
+                    <CompRecordID>11317</CompRecordID>
+                </TourInfo>
+            </ResPackage>
+            <ResPackage>
+                <PackageID>113771</PackageID>
+                <PackageCode>GYE/SCY-231125</PackageCode>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 03.000</EffectiveDate>
+                <PackageClass>TRANSFER</PackageClass>
+                <PackageType>GYE/SCY</PackageType>
+                <VacationDates>
+                    <From>2023-11-25T09:00: 00.000</From>
+                    <To>2023-11-25T10: 00: 00.000</To>
+                </VacationDates>
+                <Status>CONFIRMED</Status>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+                <SellLimInvResult>OK</SellLimInvResult>
+                <Transfer>
+                    <From>
+                        <Type>AIRPORT</Type>
+                        <Code>GYE</Code>
+                        <DateTime>2023-11-25T09:00: 00.000</DateTime>
+                    </From>
+                    <To>
+                        <Type>AIRPORT</Type>
+                        <Code>SCY</Code>
+                        <DateTime>2023-11-25T10: 00: 00.000</DateTime>
+                    </To>
+                </Transfer>
+                <TourInfo>
+                    <PackageType>ETGALASCYGPS</PackageType>
+                    <PackageID>113768</PackageID>
+                    <PackageCode>ETGALA-231124</PackageCode>
+                    <CompRecordID>11315</CompRecordID>
+                </TourInfo>
+            </ResPackage>
+            <ResPackage>
+                <PackageID>113772</PackageID>
+                <PackageCode>GPS/GYE-231202</PackageCode>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 03.000</EffectiveDate>
+                <PackageClass>TRANSFER</PackageClass>
+                <PackageType>GPS/GYE</PackageType>
+                <VacationDates>
+                    <From>2023-12-02T09: 00: 00.000</From>
+                    <To>2023-12-02T10: 00: 00.000</To>
+                </VacationDates>
+                <Status>CONFIRMED</Status>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+                <SellLimInvResult>OK</SellLimInvResult>
+                <Transfer>
+                    <From>
+                        <Type>AIRPORT</Type>
+                        <Code>GPS</Code>
+                        <DateTime>2023-12-02T09: 00: 00.000</DateTime>
+                    </From>
+                    <To>
+                        <Type>AIRPORT</Type>
+                        <Code>GYE</Code>
+                        <DateTime>2023-12-02T10: 00: 00.000</DateTime>
+                    </To>
+                </Transfer>
+                <TourInfo>
+                    <PackageType>ETGALASCYGPS</PackageType>
+                    <PackageID>113768</PackageID>
+                    <PackageCode>ETGALA-231124</PackageCode>
+                    <CompRecordID>11318</CompRecordID>
+                </TourInfo>
+            </ResPackage>
+        </ResPackages>
+        <ResShipRequests>
+            <ResShipRequest>
+                <GuestRefs>1 2</GuestRefs>
+                <CabinSeqN>1</CabinSeqN>
+                <Sail>
+                    <Ship>ET</Ship>
+                    <From>
+                        <DateTime>2023-11-25T12: 00: 00.000</DateTime>
+                        <SailRefID>40263</SailRefID>
+                        <Port>ECSCY</Port>
+                    </From>
+                    <To>
+                        <DateTime>2023-12-02T08: 00: 00.000</DateTime>
+                        <SailRefID>40274</SailRefID>
+                        <Port>ECGPS</Port>
+                    </To>
+                    <PrevArrival>
+                        <DateTime>2023-11-25T08:00: 00.000</DateTime>
+                        <SailRefID>40262</SailRefID>
+                        <Port>ECSCY</Port>
+                    </PrevArrival>
+                    <NextDeparture>
+                        <DateTime>2023-12-02T12: 00: 00.000</DateTime>
+                        <SailRefID>40275</SailRefID>
+                        <Port>ECGPS</Port>
+                    </NextDeparture>
+                </Sail>
+                <Category>02</Category>
+                <PriceCategory>02</PriceCategory>
+                <InventoryReqType>STANDARD</InventoryReqType>
+                <UserMayRequestCabin>Y</UserMayRequestCabin>
+                <RequestedCabin>215</RequestedCabin>
+                <Inventory>
+                    <Result>OK</Result>
+                    <CabinChain>
+                        <CabinAssignment>
+                            <Sail>
+                                <Ship>ET</Ship>
+                                <From>
+                                    <DateTime>2023-11-25T12: 00:00.000</DateTime>
+                                    <SailRefID>40263</SailRefID>
+                                    <Port>ECSCY</Port>
+                                </From>
+                                <To>
+                                    <DateTime>2023-12-02T08: 00: 00.000</DateTime>
+                                    <SailRefID>40274</SailRefID>
+                                    <Port>ECGPS</Port>
+                                </To>
+                                <PrevArrival>
+                                    <DateTime>2023-11-25T08: 00: 00.000</DateTime>
+                                    <SailRefID>40262</SailRefID>
+                                    <Port>ECSCY</Port>
+                                </PrevArrival>
+                                <NextDeparture>
+                                    <DateTime>2023-12-02T12:00: 00.000</DateTime>
+                                    <SailRefID>40275</SailRefID>
+                                    <Port>ECGPS</Port>
+                                </NextDeparture>
+                            </Sail>
+                            <CabinNumber>215</CabinNumber>
+                            <CabinCategory>02</CabinCategory>
+                            <SoftAssignment>N</SoftAssignment>
+                        </CabinAssignment>
+                    </CabinChain>
+                </Inventory>
+                <Attributes>
+                    <Attribute>
+                        <Code>QUEEN</Code>
+                        <IsRequired>Y</IsRequired>
+                    </Attribute>
+                </Attributes>
+            </ResShipRequest>
+        </ResShipRequests>
+        <ResRoomRequests>
+            <ResRoomRequest>
+                <RequestID>129656</RequestID>
+                <RoomSeqN>1</RoomSeqN>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <Stay>
+                    <From>2023-11-24</From>
+                    <To>2023-11-25</To>
+                </Stay>
+                <City>ECGYE</City>
+                <HotelCategory>ECUADOR</HotelCategory>
+                <HotelCode>ORO VERDE</HotelCode>
+                <RoomCategory>STANDARD</RoomCategory>
+                <RoomType>DELUXE</RoomType>
+                <Occupancy>2</Occupancy>
+                <IsIndependent>N</IsIndependent>
+                <ExtraRoomMode>AUTO</ExtraRoomMode>
+                <Guests>
+                    <RoomGuest>
+                        <GuestRefs>1 2</GuestRefs>
+                        <Stay>
+                            <From>2023-11-24</From>
+                            <To>2023-11-25</To>
+                        </Stay>
+                        <HasPreAirNight>N</HasPreAirNight>
+                        <HasPostAirNight>N</HasPostAirNight>
+                    </RoomGuest>
+                </Guests>
+                <InventoryReqType>STANDARD</InventoryReqType>
+                <Inventory>
+                    <Result>OK</Result>
+                    <AssignedHotel>ORO VERDE</AssignedHotel>
+                    <AssignedRoom>DELUXE</AssignedRoom>
+                    <SpaceType>EXPEDITION</SpaceType>
+                </Inventory>
+                <Requests>
+                    <HotelRequest>
+                        <Stay>
+                            <From>2023-11-24</From>
+                            <To>2023-11-25</To>
+                        </Stay>
+                        <RequestType>TOUR</RequestType>
+                        <HotelSpaceType>EXPEDITION</HotelSpaceType>
+                        <Occupancy>2</Occupancy>
+                        <InventoryResult>OK</InventoryResult>
+                        <SellLimInvResult>OK</SellLimInvResult>
+                        <SetupCodes>
+                            <SetupCode>
+                                <Code>AGE CATEGORY</Code>
+                                <Value>ADULT</Value>
+                                <IsEditable>N</IsEditable>
+                                <GuestRefs>1 2</GuestRefs>
+                            </SetupCode>
+                        </SetupCodes>
+                        <Tour>
+                            <GuestTourInfo>
+                                <GuestRefs>1 2</GuestRefs>
+                                <TourInfo>
+                                    <PackageType>ETGALASCYGPS</PackageType>
+                                    <PackageID>113768</PackageID>
+                                    <PackageCode>ETGALA-231124</PackageCode>
+                                    <CompRecordID>11311</CompRecordID>
+                                </TourInfo>
+                            </GuestTourInfo>
+                        </Tour>
+                    </HotelRequest>
+                </Requests>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+            </ResRoomRequest>
+            <ResRoomRequest>
+                <RequestID>129657</RequestID>
+                <RoomSeqN>2</RoomSeqN>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <Stay>
+                    <From>2023-12-02</From>
+                    <To>2023-12-03</To>
+                </Stay>
+                <City>ECGYE</City>
+                <HotelCategory>ECUADOR</HotelCategory>
+                <HotelCode>ORO VERDE</HotelCode>
+                <RoomCategory>STANDARD</RoomCategory>
+                <RoomType>DELUXE</RoomType>
+                <Occupancy>2</Occupancy>
+                <IsIndependent>N</IsIndependent>
+                <ExtraRoomMode>AUTO</ExtraRoomMode>
+                <Guests>
+                    <RoomGuest>
+                        <GuestRefs>1 2</GuestRefs>
+                        <Stay>
+                            <From>2023-12-02</From>
+                            <To>2023-12-03</To>
+                        </Stay>
+                        <HasPreAirNight>N</HasPreAirNight>
+                        <HasPostAirNight>N</HasPostAirNight>
+                    </RoomGuest>
+                </Guests>
+                <InventoryReqType>STANDARD</InventoryReqType>
+                <Inventory>
+                    <Result>OK</Result>
+                    <AssignedHotel>ORO VERDE</AssignedHotel>
+                    <AssignedRoom>DELUXE</AssignedRoom>
+                    <SpaceType>EXPEDITION</SpaceType>
+                </Inventory>
+                <Requests>
+                    <HotelRequest>
+                        <Stay>
+                            <From>2023-12-02</From>
+                            <To>2023-12-03</To>
+                        </Stay>
+                        <RequestType>TOUR</RequestType>
+                        <HotelSpaceType>EXPEDITION</HotelSpaceType>
+                        <Occupancy>2</Occupancy>
+                        <InventoryResult>OK</InventoryResult>
+                        <SellLimInvResult>OK</SellLimInvResult>
+                        <SetupCodes>
+                            <SetupCode>
+                                <Code>AGE CATEGORY</Code>
+                                <Value>ADULT</Value>
+                                <IsEditable>N</IsEditable>
+                                <GuestRefs>1 2</GuestRefs>
+                            </SetupCode>
+                        </SetupCodes>
+                        <Tour>
+                            <GuestTourInfo>
+                                <GuestRefs>1 2</GuestRefs>
+                                <TourInfo>
+                                    <PackageType>ETGALASCYGPS</PackageType>
+                                    <PackageID>113768</PackageID>
+                                    <PackageCode>ETGALA-231124</PackageCode>
+                                    <CompRecordID>11320</CompRecordID>
+                                </TourInfo>
+                            </GuestTourInfo>
+                        </Tour>
+                    </HotelRequest>
+                </Requests>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+            </ResRoomRequest>
+        </ResRoomRequests>
+        <ResAirPoints>
+            <ResAirPoint>
+                <VacEnd>
+                    <Location>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </Location>
+                    <Date>2023-12-03</Date>
+                    <Component>
+                        <RoomSeqN>2</RoomSeqN>
+                    </Component>
+                    <DepartAfter>
+                        <Option>
+                            <Airport>GYE</Airport>
+                            <Earliest>2023-12-03T00: 00: 00.000</Earliest>
+                        </Option>
+                        <Earliest>2023-12-03T00: 00: 00.000</Earliest>
+                    </DepartAfter>
+                </VacEnd>
+                <AirPointCode>VACATION_RET</AirPointCode>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47:02.577</EffectiveDate>
+                <AirCabinClass>ECONOMY</AirCabinClass>
+            </ResAirPoint>
+            <ResAirPoint>
+                <VacStart>
+                    <Location>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </Location>
+                    <Date>2023-11-24</Date>
+                    <Component>
+                        <RoomSeqN>1</RoomSeqN>
+                    </Component>
+                    <ArriveBy>
+                        <Option>
+                            <Airport>GYE</Airport>
+                            <Latest>2023-11-24T00: 00: 00.000</Latest>
+                        </Option>
+                        <Latest>2023-11-24T00: 00: 00.000</Latest>
+                    </ArriveBy>
+                </VacStart>
+                <AirPointCode>VACATION_OUT</AirPointCode>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 02.577</EffectiveDate>
+                <AirCabinClass>ECONOMY</AirCabinClass>
+            </ResAirPoint>
+        </ResAirPoints>
+        <ResAddons>
+            <ResAddon>
+                <GuestRefs>1 2</GuestRefs>
+                <AddonIDs>166908 166907</AddonIDs>
+                <AddonCode>C/O</AddonCode>
+                <LinkedRequest>
+                    <LinkDescriptor>Booking</LinkDescriptor>
+                </LinkedRequest>
+                <EffectiveDate>2023-04-26T00: 00:00.000</EffectiveDate>
+                <IsMandatory>N</IsMandatory>
+                <DateTimeRange>
+                    <From>2023-11-24T00: 00: 00.000</From>
+                    <To>2023-12-03T00: 00: 00.000</To>
+                </DateTimeRange>
+                <Quantity>1</Quantity>
+                <IsSpecialRequest>N</IsSpecialRequest>
+                <Status>CONFIRMED</Status>
+                <SellLimInvResult>OK</SellLimInvResult>
+                <SetupCodes>
+                    <SetupCode>
+                        <Code>AGE CATEGORY</Code>
+                        <Value>ADULT</Value>
+                        <IsEditable>N</IsEditable>
+                        <GuestRefs>1 2</GuestRefs>
+                    </SetupCode>
+                </SetupCodes>
+            </ResAddon>
+        </ResAddons>
+        <ResInvoice>
+            <ResInvoiceItem>
+                <GuestSeqN>1</GuestSeqN>
+                <Source>
+                    <RoomSeqN>1</RoomSeqN>
+                </Source>
+                <Type>HOTEL FARE</Type>
+                <Amount>0</Amount>
+                <PriceArea>HOTEL</PriceArea>
+                <ExtendedInfo>TOUR</ExtendedInfo>
+                <ProductID>124369</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>2</GuestSeqN>
+                <Source>
+                    <RoomSeqN>1</RoomSeqN>
+                </Source>
+                <Type>HOTEL FARE</Type>
+                <Amount>0</Amount>
+                <PriceArea>HOTEL</PriceArea>
+                <ExtendedInfo>TOUR</ExtendedInfo>
+                <ProductID>124369</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>1</GuestSeqN>
+                <Source>
+                    <RoomSeqN>2</RoomSeqN>
+                </Source>
+                <Type>HOTEL FARE</Type>
+                <Amount>0</Amount>
+                <PriceArea>HOTEL</PriceArea>
+                <ExtendedInfo>TOUR</ExtendedInfo>
+                <ProductID>124370</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>2</GuestSeqN>
+                <Source>
+                    <RoomSeqN>2</RoomSeqN>
+                </Source>
+                <Type>HOTEL FARE</Type>
+                <Amount>0</Amount>
+                <PriceArea>HOTEL</PriceArea>
+                <ExtendedInfo>TOUR</ExtendedInfo>
+                <ProductID>124370</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>1</GuestSeqN>
+                <Source>
+                    <PackageID>113385</PackageID>
+                    <PackageCode>ET112347</PackageCode>
+                    <CabinSeqN>1</CabinSeqN>
+                </Source>
+                <Type>EXPEDITION FARE</Type>
+                <Amount>9260</Amount>
+                <CmsPercent>25</CmsPercent>
+                <PriceArea>VOYAGE</PriceArea>
+                <ProductID>124368</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>2</GuestSeqN>
+                <Source>
+                    <PackageID>113385</PackageID>
+                    <PackageCode>ET112347</PackageCode>
+                    <CabinSeqN>1</CabinSeqN>
+                </Source>
+                <Type>EXPEDITION FARE</Type>
+                <Amount>9260</Amount>
+                <CmsPercent>25</CmsPercent>
+                <PriceArea>VOYAGE</PriceArea>
+                <ProductID>124368</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>1</GuestSeqN>
+                <Source>
+                    <PackageID>113771</PackageID>
+                    <PackageCode>GYE/SCY-231125</PackageCode>
+                </Source>
+                <Type>TRANSFER</Type>
+                <SubType1>INTERNAL AIR</SubType1>
+                <Amount>260</Amount>
+                <PriceArea>TRANSFER</PriceArea>
+                <ProductID>124365</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>2</GuestSeqN>
+                <Source>
+                    <PackageID>113771</PackageID>
+                    <PackageCode>GYE/SCY-231125</PackageCode>
+                </Source>
+                <Type>TRANSFER</Type>
+                <SubType1>INTERNAL AIR</SubType1>
+                <Amount>260</Amount>
+                <PriceArea>TRANSFER</PriceArea>
+                <ProductID>124365</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>1</GuestSeqN>
+                <Source>
+                    <PackageID>113772</PackageID>
+                    <PackageCode>GPS/GYE-231202</PackageCode>
+                </Source>
+                <Type>TRANSFER</Type>
+                <SubType1>INTERNAL AIR</SubType1>
+                <Amount>260</Amount>
+                <PriceArea>TRANSFER</PriceArea>
+                <ProductID>124366</ProductID>
+            </ResInvoiceItem>
+            <ResInvoiceItem>
+                <GuestSeqN>2</GuestSeqN>
+                <Source>
+                    <PackageID>113772</PackageID>
+                    <PackageCode>GPS/GYE-231202</PackageCode>
+                </Source>
+                <Type>TRANSFER</Type>
+                <SubType1>INTERNAL AIR</SubType1>
+                <Amount>260</Amount>
+                <PriceArea>TRANSFER</PriceArea>
+                <ProductID>124366</ProductID>
+            </ResInvoiceItem>
+        </ResInvoice>
+        <ResPaymentSchedule>
+            <ResPaySchItem>
+                <DueType>FINAL PAYMENT</DueType>
+                <DueDate>2023-07-27T23: 59: 59.000</DueDate>
+                <ExpirationDate>2023-07-27T23: 59: 59.000</ExpirationDate>
+                <Amount>19560</Amount>
+                <Paid>N</Paid>
+            </ResPaySchItem>
+        </ResPaymentSchedule>
+        <ResCommissions>
+            <ResCommissItem>
+                <GuestSeqN>1</GuestSeqN>
+                <PackageID>113385</PackageID>
+                <PackageCode>ET112347</PackageCode>
+                <Code>STND25</Code>
+                <Type>BASIC</Type>
+                <CmsPercent>25</CmsPercent>
+                <Amount>2315</Amount>
+                <SetupRef>BASIC, BOOKING, EXPEDITION FARE</SetupRef>
+                <CmsFare>9260</CmsFare>
+                <IsManualAdj>N</IsManualAdj>
+                <ProductID>124368</ProductID>
+                <InvoiceItemType>EXPEDITION FARE</InvoiceItemType>
+                <PayoutDate>2023-11-25</PayoutDate>
+                <Source>
+                    <PackageID>113385</PackageID>
+                    <PackageCode>ET112347</PackageCode>
+                    <CabinSeqN>1</CabinSeqN>
+                </Source>
+            </ResCommissItem>
+            <ResCommissItem>
+                <GuestSeqN>2</GuestSeqN>
+                <PackageID>113385</PackageID>
+                <PackageCode>ET112347</PackageCode>
+                <Code>STND25</Code>
+                <Type>BASIC</Type>
+                <CmsPercent>25</CmsPercent>
+                <Amount>2315</Amount>
+                <SetupRef>BASIC, BOOKING, EXPEDITION FARE</SetupRef>
+                <CmsFare>9260</CmsFare>
+                <IsManualAdj>N</IsManualAdj>
+                <ProductID>124368</ProductID>
+                <InvoiceItemType>EXPEDITION FARE</InvoiceItemType>
+                <PayoutDate>2023-11-25</PayoutDate>
+                <Source>
+                    <PackageID>113385</PackageID>
+                    <PackageCode>ET112347</PackageCode>
+                    <CabinSeqN>1</CabinSeqN>
+                </Source>
+            </ResCommissItem>
+        </ResCommissions>
+        <ResComponents>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T00: 00: 00.000</EffectiveDate>
+                <Type>ADD-ON</Type>
+                <Code>C/O</Code>
+                <DateTimeRange>
+                    <From>2023-11-24T00: 00:00.000</From>
+                    <To>2023-12-03T00: 00: 00.000</To>
+                </DateTimeRange>
+            </ResComponent>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <Type>HOTEL</Type>
+                <Code>ECUADOR</Code>
+                <SubCode1>ORO VERDE</SubCode1>
+                <SubCode2>TOUR</SubCode2>
+                <SubCode3>ECGYE</SubCode3>
+                <DateTimeRange>
+                    <From>2023-11-24T00: 00: 00.000</From>
+                    <To>2023-11-25T00: 00: 00.000</To>
+                </DateTimeRange>
+                <Location>
+                    <From>
+                        <Type>CITY</Type>
+                        <Code>ECGYE</Code>
+                    </From>
+                    <To>
+                        <Type>CITY</Type>
+                        <Code>ECGYE</Code>
+                    </To>
+                </Location>
+            </ResComponent>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <Type>HOTEL</Type>
+                <Code>ECUADOR</Code>
+                <SubCode1>ORO VERDE</SubCode1>
+                <SubCode2>TOUR</SubCode2>
+                <SubCode3>ECGYE</SubCode3>
+                <DateTimeRange>
+                    <From>2023-12-02T00: 00: 00.000</From>
+                    <To>2023-12-03T00:00: 00.000</To>
+                </DateTimeRange>
+                <Location>
+                    <From>
+                        <Type>CITY</Type>
+                        <Code>ECGYE</Code>
+                    </From>
+                    <To>
+                        <Type>CITY</Type>
+                        <Code>ECGYE</Code>
+                    </To>
+                </Location>
+            </ResComponent>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <PackageID>113385</PackageID>
+                <PackageCode>ET112347</PackageCode>
+                <EffectiveDate>2023-04-26T12: 47: 02.000</EffectiveDate>
+                <Type>SAIL</Type>
+                <Code>ET</Code>
+                <DateTimeRange>
+                    <From>2023-11-25T12: 00: 00.000</From>
+                    <To>2023-12-02T08: 00: 00.000</To>
+                </DateTimeRange>
+                <Location>
+                    <From>
+                        <Type>PORT</Type>
+                        <Code>ECSCY</Code>
+                    </From>
+                    <To>
+                        <Type>PORT</Type>
+                        <Code>ECGPS</Code>
+                    </To>
+                </Location>
+            </ResComponent>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <PackageID>113771</PackageID>
+                <PackageCode>GYE/SCY-231125</PackageCode>
+                <EffectiveDate>2023-04-26T12: 47:03.000</EffectiveDate>
+                <Type>INTERNAL</Type>
+                <SubCode1>AIRPORT</SubCode1>
+                <SubCode2>GYE</SubCode2>
+                <SubCode3>SCY</SubCode3>
+                <DateTimeRange>
+                    <From>2023-11-25T09: 00: 00.000</From>
+                    <To>2023-11-25T10: 00: 00.000</To>
+                </DateTimeRange>
+                <Location>
+                    <From>
+                        <Type>AIRPORT</Type>
+                        <Code>GYE</Code>
+                    </From>
+                    <To>
+                        <Type>AIRPORT</Type>
+                        <Code>SCY</Code>
+                    </To>
+                </Location>
+            </ResComponent>
+            <ResComponent>
+                <GuestRefs>1 2</GuestRefs>
+                <PackageID>113772</PackageID>
+                <PackageCode>GPS/GYE-231202</PackageCode>
+                <EffectiveDate>2023-04-26T12: 47: 03.000</EffectiveDate>
+                <Type>INTERNAL</Type>
+                <SubCode1>AIRPORT</SubCode1>
+                <SubCode2>GPS</SubCode2>
+                <SubCode3>GYE</SubCode3>
+                <DateTimeRange>
+                    <From>2023-12-02T09: 00: 00.000</From>
+                    <To>2023-12-02T10: 00: 00.000</To>
+                </DateTimeRange>
+                <Location>
+                    <From>
+                        <Type>AIRPORT</Type>
+                        <Code>GPS</Code>
+                    </From>
+                    <To>
+                        <Type>AIRPORT</Type>
+                        <Code>GYE</Code>
+                    </To>
+                </Location>
+            </ResComponent>
+        </ResComponents>
+        <UserNotes>
+            <UserNote>
+                <RecordID>60893</RecordID>
+                <Subject>MIGRATION</Subject>
+                <Notes>4.29 AS PER DAWN OK TO CHANGE IT TO 2021 DUE TO COVID- BA /// NYBA</Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60894</RecordID>
+                <Subject>MIGRATION</Subject>
+                <Notes>2/11 COMP CABIN PER AW AGREEMENT - JM /// NYJMM</Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60895</RecordID>
+                <Subject>MIGRATION</Subject>
+                <Notes>CALYPSO BOOKING #147317 /// NYBA</Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60896</RecordID>
+                <Subject>INVOICE</Subject>
+                <Notes>TRAVEL PROTECTION PLUS IS ONLY AVAILABLE TO RESIDENTS AND/OR CITIZENS OF THE UNITED STATES AND
+                    CANADA. /// NYBA
+                </Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60897</RecordID>
+                <Subject>MIGRATION</Subject>
+                <Notes>VIRTUOSO PRIZEWINNER: COMP CABIN - AIR NOT INCLUDED. /// NYJMM</Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60898</RecordID>
+                <Subject>BOOKING TYPE</Subject>
+                <Notes>R</Notes>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60899</RecordID>
+                <Subject>WEBSITE BKG NO</Subject>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+            <UserNote>
+                <RecordID>60900</RecordID>
+                <Subject>DOCS ONLINE YES</Subject>
+                <CreatedAt>2023-04-26T12:47:02.000</CreatedAt>
+                <User>BIZLOGIC_SERVER</User>
+                <IsAuto>N</IsAuto>
+            </UserNote>
+        </UserNotes>
+        <VacationInfo>
+            <VacationInfoItem>
+                <GuestRefs>1 2</GuestRefs>
+                <SailRange>
+                    <From>2023-11-25T12:00:00.000</From>
+                    <To>2023-12-02T08:00:00.000</To>
+                </SailRange>
+                <VacationRange>
+                    <From>2023-11-24T00:00:00.000</From>
+                    <To>2023-12-03T00:00:00.000</To>
+                </VacationRange>
+                <VacationNoAirRange>
+                    <From>2023-11-24T00:00:00.000</From>
+                    <To>2023-12-03T00:00:00.000</To>
+                </VacationNoAirRange>
+                <LocationRange>
+                    <From>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </From>
+                    <To>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </To>
+                </LocationRange>
+                <LocationNoAirRange>
+                    <From>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </From>
+                    <To>
+                        <Type>HOTEL</Type>
+                        <Code>ORO VERDE</Code>
+                    </To>
+                </LocationNoAirRange>
+            </VacationInfoItem>
+        </VacationInfo>
+        <CLIENTS_INFO KeyValuePath="//ResShell.ResGuests/ResGuest/ClientID">
+            <ROW>
+                <CLIENT_ID>2224619</CLIENT_ID>
+                <FULL_NAME>RALSTON DAVID</FULL_NAME>
+            </ROW>
+            <ROW>
+                <CLIENT_ID>2224620</CLIENT_ID>
+                <FULL_NAME>RALSTON LEANNE</FULL_NAME>
+            </ROW>
+        </CLIENTS_INFO>
+        <AGENCY_INFO KeyValuePath="//ResShell.ResHeader/AgencyID">
+            <ROW>
+                <AGENCY_ID>406</AGENCY_ID>
+                <AGENCY_NAME_TYPED>Aw - Agent Bookings</AGENCY_NAME_TYPED>
+            </ROW>
+        </AGENCY_INFO>
+    </ResShell>
+    <Environment>
+        <ApplicationType>XML SERVER</ApplicationType>
+        <EngineVersion>36.39.2</EngineVersion>
+        <DBVersion>36.39</DBVersion>
+    </Environment>
+</ResHistory>
