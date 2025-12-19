@@ -29,6 +29,11 @@ Thumbs.db
 # ======================
 .vscode/
 .idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim / swap / temp files
 *.swp
 *.swo
 *~
@@ -38,8 +43,29 @@ Thumbs.db
 # ======================
 __pycache__/
 *.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ======================
+# Python tooling
+# ======================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ======================
+# Logs & runtime artifacts
+# ======================
+*.log
 
 # ======================
 # Misc
 # ======================
-*.log
+.cache/
