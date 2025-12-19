@@ -1,0 +1,432 @@
+version: 2
+
+models:
+  - name: v_brz_orders
+    description: |
+      Bronze representation of the `orders` source file, with minimal typing and standardised names.
+
+      Purpose: provide a stable, typed interface to the raw seed for downstream staging and Data Vault loading.
+      No business logic is applied in bronze.
+    columns:
+      - name: order_id
+        description: "Order business identifier from the source file."
+      - name: order_date
+        description: "Order date (cast from the raw `orders.date`)."
+      - name: order_time
+        description: "Order time (cast from the raw `orders.time`)."
+
+  - name: v_brz_order_details
+    description: |
+      Bronze representation of the `order_details` source file (line items), with minimal typing.
+
+      Grain: one row per order line in the source file.
+    columns:
+      - name: order_details_id
+        description: "Order line business identifier from the source file."
+      - name: order_id
+        description: "Order business identifier (FK to `orders.order_id`)."
+      - name: pizza_id
+        description: "Pizza SKU identifier (FK to `pizzas.pizza_id`)."
+      - name: quantity
+        description: "Quantity of the pizza SKU ordered on this line."
+
+  - name: v_brz_pizzas
+    description: |
+      Bronze representation of the `pizzas` source file (pizza SKUs), with minimal typing.
+
+      Grain: one row per sellable pizza SKU (pizza type + size).
+    columns:
+      - name: pizza_id
+        description: "Pizza SKU identifier (joins to `order_details.pizza_id`)."
+      - name: pizza_type_id
+        description: "Pizza product identifier (FK to `pizza_types.pizza_type_id`)."
+      - name: size
+        description: "Pizza size code."
+      - name: price
+        description: "Unit price for the pizza SKU."
+
+  - name: v_brz_pizza_types
+    description: |
+      Bronze representation of the `pizza_types` source file (pizza product definitions).
+
+      Grain: one row per pizza type.
+    columns:
+      - name: pizza_type_id
+        description: "Pizza product identifier (joins to `pizzas.pizza_type_id`)."
+      - name: name
+        description: "Customer-facing pizza name."
+      - name: category
+        description: "High-level pizza category used for reporting/analysis."
+      - name: ingredients
+        description: "Ingredient list (free-text, comma-separated)."
+
+  - name: v_stg_orders
+    description: |
+      Data Vault staging model for orders.
+
+      Responsibilities:
+      - carry the order business key (`order_id`)
+      - add DV technical columns (`load_datetime`, `record_source`)
+      - compute the order hub hash key (`hub_order_pk`)
+      - compute the descriptive hashdiff (`order_hashdiff`) for satellite change detection
+    columns:
+      - name: order_id
+        description: "Order business key."
+      - name: order_date
+        description: "Order date (payload attribute for `sat_order`)."
+      - name: order_time
+        description: "Order time (payload attribute for `sat_order`)."
+      - name: record_source
+        description: "Static identifier for the upstream source system/file."
+      - name: load_datetime
+        description: "Timestamp when the record is loaded into the Data Vault (load date timestamp / LDTS)."
+      - name: hub_order_pk
+        description: "Hashed primary key for the order hub (derived from `order_id`)."
+      - name: order_hashdiff
+        description: "Hashdiff tracking changes to order header attributes (`order_date`, `order_time`)."
+
+  - name: v_stg_order_details
+    description: |
+      Data Vault staging model for order line items.
+
+      Responsibilities:
+      - carry line attributes at order ↔ pizza grain (`quantity`, `order_details_id`)
+      - compute hub hash keys (`hub_order_pk`, `hub_pizza_pk`)
+      - compute the relationship link hash key (`lnk_order_pizza_pk`)
+      - compute the line hashdiff (`order_line_hashdiff`) for satellite change detection
+    columns:
+      - name: order_details_id
+        description: "Order line business identifier from the source file (kept as a payload attribute)."
+      - name: order_id
+        description: "Order business key."
+      - name: pizza_id
+        description: "Pizza SKU business key."
+      - name: quantity
+        description: "Number of units ordered for the pizza SKU on the order."
+      - name: record_source
+        description: "Static identifier for the upstream source system/file."
+      - name: load_datetime
+        description: "Timestamp when the record is loaded into the Data Vault (LDTS)."
+      - name: hub_order_pk
+        description: "Hashed primary key for the order hub (derived from `order_id`)."
+      - name: hub_pizza_pk
+        description: "Hashed primary key for the pizza hub (derived from `pizza_id`)."
+      - name: lnk_order_pizza_pk
+        description: "Hashed primary key for the order ↔ pizza relationship (derived from `order_id` + `pizza_id`)."
+      - name: order_line_hashdiff
+        description: "Hashdiff tracking changes to order-line metrics (currently `quantity`)."
+
+  - name: v_stg_pizzas
+    description: |
+      Data Vault staging model for pizza SKUs.
+
+      Responsibilities:
+      - carry pizza SKU business key (`pizza_id`)
+      - compute hub hash keys (`hub_pizza_pk`, `hub_pizza_type_pk`)
+      - compute the pizza ↔ pizza type relationship key (`lnk_pizza_pizza_type_pk`)
+      - compute the descriptive hashdiff (`pizza_hashdiff`) for satellite change detection
+    columns:
+      - name: pizza_id
+        description: "Pizza SKU business key (type + size)."
+      - name: pizza_type_id
+        description: "Pizza type business key."
+      - name: size
+        description: "Pizza size code (payload attribute for `sat_pizza`)."
+      - name: price
+        description: "Unit price for the pizza SKU (payload attribute for `sat_pizza`)."
+      - name: record_source
+        description: "Static identifier for the upstream source system/file."
+      - name: load_datetime
+        description: "Timestamp when the record is loaded into the Data Vault (LDTS)."
+      - name: hub_pizza_pk
+        description: "Hashed primary key for the pizza hub (derived from `pizza_id`)."
+      - name: hub_pizza_type_pk
+        description: "Hashed primary key for the pizza type hub (derived from `pizza_type_id`)."
+      - name: lnk_pizza_pizza_type_pk
+        description: "Hashed primary key for the pizza ↔ pizza type relationship (derived from `pizza_id` + `pizza_type_id`)."
+      - name: pizza_hashdiff
+        description: "Hashdiff tracking changes to pizza SKU attributes (`size`, `price`)."
+
+  - name: v_stg_pizza_types
+    description: |
+      Data Vault staging model for pizza types.
+
+      Responsibilities:
+      - carry pizza type business key (`pizza_type_id`)
+      - compute hub hash key (`hub_pizza_type_pk`)
+      - compute descriptive hashdiff (`pizza_type_hashdiff`) for satellite change detection
+    columns:
+      - name: pizza_type_id
+        description: "Pizza type business key."
+      - name: name
+        description: "Customer-facing pizza name (payload attribute for `sat_pizza_type`)."
+      - name: category
+        description: "High-level pizza category (payload attribute for `sat_pizza_type`)."
+      - name: ingredients
+        description: "Ingredient list (payload attribute for `sat_pizza_type`)."
+      - name: record_source
+        description: "Static identifier for the upstream source system/file."
+      - name: load_datetime
+        description: "Timestamp when the record is loaded into the Data Vault (LDTS)."
+      - name: hub_pizza_type_pk
+        description: "Hashed primary key for the pizza type hub (derived from `pizza_type_id`)."
+      - name: pizza_type_hashdiff
+        description: "Hashdiff tracking changes to pizza type descriptive attributes."
+
+  - name: hub_order
+    description: |
+      Data Vault hub for orders.
+
+      Business key: `order_id`.
+      Contains only the business key and DV technical columns (no descriptive attributes).
+    columns:
+      - name: hub_order_pk
+        description: "Hashed primary key for an order hub record."
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: "Order business key."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the hub record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: hub_pizza
+    description: |
+      Data Vault hub for pizza SKUs.
+
+      Business key: `pizza_id` (SKU identifier, typically type + size).
+    columns:
+      - name: hub_pizza_pk
+        description: "Hashed primary key for a pizza hub record."
+        tests:
+          - not_null
+          - unique
+      - name: pizza_id
+        description: "Pizza SKU business key."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the hub record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: hub_pizza_type
+    description: |
+      Data Vault hub for pizza types.
+
+      Business key: `pizza_type_id`.
+    columns:
+      - name: hub_pizza_type_pk
+        description: "Hashed primary key for a pizza type hub record."
+        tests:
+          - not_null
+          - unique
+      - name: pizza_type_id
+        description: "Pizza type business key."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the hub record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: lnk_order_pizza
+    description: |
+      Data Vault link connecting orders to pizza SKUs.
+
+      Participating hubs:
+      - `hub_order` (order)
+      - `hub_pizza` (pizza SKU)
+
+      Grain: one record per distinct (order, pizza) pair observed in the source.
+    columns:
+      - name: lnk_order_pizza_pk
+        description: "Hashed primary key for the order ↔ pizza relationship."
+        tests:
+          - not_null
+          - unique
+      - name: hub_order_pk
+        description: "Hashed foreign key to `hub_order`."
+        tests:
+          - not_null
+      - name: hub_pizza_pk
+        description: "Hashed foreign key to `hub_pizza`."
+        tests:
+          - not_null
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the link record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: lnk_pizza_pizza_type
+    description: |
+      Data Vault link connecting pizza SKUs to pizza types.
+
+      Participating hubs:
+      - `hub_pizza` (pizza SKU)
+      - `hub_pizza_type` (pizza type)
+    columns:
+      - name: lnk_pizza_pizza_type_pk
+        description: "Hashed primary key for the pizza SKU ↔ pizza type relationship."
+        tests:
+          - not_null
+          - unique
+      - name: hub_pizza_pk
+        description: "Hashed foreign key to `hub_pizza`."
+        tests:
+          - not_null
+      - name: hub_pizza_type_pk
+        description: "Hashed foreign key to `hub_pizza_type`."
+        tests:
+          - not_null
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the link record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: sat_order
+    description: |
+      Order satellite containing descriptive attributes for orders.
+
+      Historization:
+      - append-only records keyed by (`hub_order_pk`, `load_datetime`)
+      - `order_hashdiff` enables change detection for the payload attributes
+    columns:
+      - name: hub_order_pk
+        description: "Hashed foreign key to `hub_order`."
+        tests:
+          - not_null
+      - name: order_hashdiff
+        description: "Hashdiff across the order payload attributes (used to detect change)."
+        tests:
+          - not_null
+      - name: order_date
+        description: "Order date payload attribute."
+      - name: order_time
+        description: "Order time payload attribute."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the satellite record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: sat_pizza
+    description: |
+      Pizza SKU satellite containing descriptive attributes for pizza SKUs.
+
+      Historization:
+      - append-only records keyed by (`hub_pizza_pk`, `load_datetime`)
+      - `pizza_hashdiff` enables change detection for the payload attributes
+    columns:
+      - name: hub_pizza_pk
+        description: "Hashed foreign key to `hub_pizza`."
+        tests:
+          - not_null
+      - name: pizza_hashdiff
+        description: "Hashdiff across pizza SKU payload attributes (used to detect change)."
+        tests:
+          - not_null
+      - name: size
+        description: "Pizza size payload attribute."
+      - name: price
+        description: "Unit price payload attribute."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the satellite record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: sat_pizza_type
+    description: |
+      Pizza type satellite containing descriptive attributes for pizza types.
+
+      Historization:
+      - append-only records keyed by (`hub_pizza_type_pk`, `load_datetime`)
+      - `pizza_type_hashdiff` enables change detection for the payload attributes
+    columns:
+      - name: hub_pizza_type_pk
+        description: "Hashed foreign key to `hub_pizza_type`."
+        tests:
+          - not_null
+      - name: pizza_type_hashdiff
+        description: "Hashdiff across pizza type payload attributes (used to detect change)."
+        tests:
+          - not_null
+      - name: name
+        description: "Pizza name payload attribute."
+      - name: category
+        description: "Pizza category payload attribute."
+      - name: ingredients
+        description: "Ingredient list payload attribute."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the satellite record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: sat_order_line_metrics
+    description: |
+      Order line satellite containing metrics at the order ↔ pizza grain.
+
+      Parent key: `lnk_order_pizza_pk` (order ↔ pizza relationship).
+      Historization:
+      - append-only records keyed by (`lnk_order_pizza_pk`, `load_datetime`)
+      - `order_line_hashdiff` enables change detection for the payload attributes
+    columns:
+      - name: lnk_order_pizza_pk
+        description: "Hashed foreign key to `lnk_order_pizza`."
+        tests:
+          - not_null
+      - name: order_line_hashdiff
+        description: "Hashdiff across order-line payload metrics (used to detect change)."
+        tests:
+          - not_null
+      - name: order_details_id
+        description: "Source order line identifier (payload attribute)."
+      - name: quantity
+        description: "Quantity ordered (payload metric)."
+      - name: load_datetime
+        description: "Load date timestamp (LDTS) for the satellite record."
+      - name: record_source
+        description: "Identifier for the upstream source system/file."
+
+  - name: v_obt
+    description: |
+      Analytics-friendly One Big Table (OBT) for pizza sales.
+
+      Grain: one row per order line (`order_details_id`), representing a specific pizza SKU on a specific order.
+
+      Intended use cases:
+      - revenue and quantity by pizza SKU / pizza type / category
+      - order volume and revenue over time
+      - ingredient/category breakdowns
+
+      Join strategy:
+      - uses Data Vault hubs/links for keys and relationships
+      - selects the latest satellite record per hashed key to avoid fan-out as history accumulates
+    columns:
+      - name: order_details_id
+        description: "Order line identifier from the source file."
+        tests:
+          - not_null
+      - name: order_id
+        description: "Order business identifier."
+      - name: order_date
+        description: "Order date."
+      - name: order_time
+        description: "Order time."
+      - name: pizza_id
+        description: "Pizza SKU identifier."
+      - name: size
+        description: "Pizza size."
+      - name: price
+        description: "Unit price for the pizza SKU."
+      - name: pizza_type_id
+        description: "Pizza type identifier."
+      - name: pizza_type_name
+        description: "Customer-facing pizza name."
+      - name: category
+        description: "Pizza category."
+      - name: ingredients
+        description: "Ingredient list (free-text)."
+      - name: quantity
+        description: "Quantity ordered for the pizza SKU on the order."
+      - name: revenue
+        description: "Extended revenue for the line (`quantity * price`)."
+      - name: load_datetime
+        description: "Max load timestamp across joined DV records (useful for lineage/debugging)."

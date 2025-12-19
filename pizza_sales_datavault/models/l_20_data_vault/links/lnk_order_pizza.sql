@@ -1,0 +1,11 @@
+{%- set source_model = "v_stg_order_details" -%}
+{%- set src_pk = "LNK_ORDER_PIZZA_PK" -%}
+{%- set src_fk = ["HUB_ORDER_PK", "HUB_PIZZA_PK"] -%}
+{%- set src_ldts = "LOAD_DATETIME" -%}
+{%- set src_source = "RECORD_SOURCE" -%}
+
+{{ automate_dv.link(src_pk=src_pk,
+                    src_fk=src_fk,
+                    src_ldts=src_ldts,
+                    src_source=src_source,
+                    source_model=source_model) }}

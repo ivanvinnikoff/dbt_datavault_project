@@ -1,0 +1,106 @@
+version: 2
+
+sources:
+  - name: pizza_seed
+    description: |
+      Pizza Place Sales dataset, loaded from dbt seeds into the `bronze_db` schema.
+
+      These tables represent the raw source-of-truth for this project and are used only as
+      inputs to the bronze layer. Relationships:
+      - `order_details` is the line-item (order ↔ pizza) fact table.
+      - `orders` is the order header table.
+      - `pizzas` is the pizza SKU table (SKU includes size).
+      - `pizza_types` is the pizza product definition table (name/category/ingredients).
+    database: "{{ target.database }}"
+    schema: bronze_db
+    tables:
+      - name: orders
+        description: |
+          Order headers: one row per order placed.
+
+          `order_id` is the business identifier for an order; line items live in `order_details`.
+        columns:
+          - name: order_id
+            description: "Business identifier for an order (joins to `order_details.order_id`)."
+            tests:
+              - not_null
+              - unique
+          - name: date
+            description: "Calendar date when the order was placed (local shop time)."
+          - name: time
+            description: "Time of day when the order was placed (local shop time)."
+
+      - name: order_details
+        description: |
+          Order line items: one row per pizza SKU on an order.
+
+          This is the transactional bridge between `orders` and `pizzas`, with the ordered
+          `quantity` for each `pizza_id` on each `order_id`.
+        columns:
+          - name: order_details_id
+            description: "Business identifier for an order line (unique per row in this file)."
+            tests:
+              - not_null
+              - unique
+          - name: order_id
+            description: "Order business identifier (FK to `orders.order_id`)."
+            tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('pizza_seed', 'orders')
+                    field: order_id
+          - name: pizza_id
+            description: "Pizza SKU identifier (FK to `pizzas.pizza_id`)."
+            tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('pizza_seed', 'pizzas')
+                    field: pizza_id
+          - name: quantity
+            description: "Number of units of the pizza SKU ordered on this line."
+
+      - name: pizzas
+        description: |
+          Pizza SKU master data: one row per sellable pizza variant (type + size).
+
+          `pizza_id` identifies the SKU (usually pizza type plus a size suffix).
+          `price` is the unit price for the SKU at the time of this dataset extract.
+        columns:
+          - name: pizza_id
+            description: "Pizza SKU identifier (joins to `order_details.pizza_id`)."
+            tests:
+              - not_null
+              - unique
+          - name: pizza_type_id
+            description: "Pizza product identifier (FK to `pizza_types.pizza_type_id`)."
+            tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('pizza_seed', 'pizza_types')
+                    field: pizza_type_id
+          - name: size
+            description: "Pizza size code (e.g., S/M/L/XL)."
+          - name: price
+            description: "Unit price for the pizza SKU."
+
+      - name: pizza_types
+        description: |
+          Pizza product definitions: one row per pizza type.
+
+          This is the descriptive dimension for `pizzas.pizza_type_id`, including the
+          customer-facing name, high-level category, and ingredient list.
+        columns:
+          - name: pizza_type_id
+            description: "Pizza product identifier (joins to `pizzas.pizza_type_id`)."
+            tests:
+              - not_null
+              - unique
+          - name: name
+            description: "Customer-facing pizza name."
+          - name: category
+            description: "High-level category for analysis (e.g., Classic, Chicken, Veggie, Supreme)."
+          - name: ingredients
+            description: "Ingredient list (free-text, comma-separated)."
